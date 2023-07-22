@@ -18,7 +18,7 @@
       {#each wishlistData as movie}
         <div class="movie">
           <h2>{movie.title}</h2>
-          <!-- <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="{movie.title}" /> -->
+          <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="{movie.title}" />
           <br>
           <br>
           <p>{movie.overview}</p>
