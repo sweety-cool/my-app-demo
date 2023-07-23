@@ -1,13 +1,16 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
+// Database
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
 
+// Generators
 generator client {
  provider = "prisma-client-js"
 }
 
-datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
+generator docs {
+  provider = "node node_modules/prisma-docs-generator"
 }
 
 
