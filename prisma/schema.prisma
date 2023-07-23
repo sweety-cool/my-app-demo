@@ -40,4 +40,8 @@ model User {
   wishlist  String?
 }
 
-
+model PopularMovies {
+  id             Int @id // Comes from IMDB Movie ID
+  title          String
+  favouriteCount Int @default(0) // Number of users who have this movie in their wishlist
+}
