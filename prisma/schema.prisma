@@ -13,6 +13,22 @@ generator docs {
   provider = "node node_modules/prisma-docs-generator"
 }
 
+generator erd {
+  provider = "prisma-erd-generator"
+  output = "ERD.svg"
+  includeRelationFromFields = true
+}
+
+generator erd2 {
+  provider = "prisma-erd-generator"
+  output = "ERD.pdf"
+  includeRelationFromFields = true
+}
+
+
+
+
+// Data Models
 
 model User {
   id        Int      @id @default(autoincrement())
